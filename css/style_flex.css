@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 10px;
+}
+.container{
+    width: 95%;
+    border: 5px solid #000;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px #adff2f;
+    display: flex;
+    /* flex-direction:row-reverse; */
+    justify-content: center;
+
+    height: 200px;
+    align-items: center;
+    /* align-content: center; */
+}
+
+
+.element{
+    background-color: aqua;
+    height: 50px;
+    width: 20%;
+    color: blueviolet;
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid #000;
+    margin: 5px;
+    text-align: center;
+}
+
+#one{
+    background-color: greenyellow;
+    order: 3;
+}
+
+#two{
+    background-color:bisque;
+    order: 1;
+
+}
+
+#three{
+    order: 2;
+}
