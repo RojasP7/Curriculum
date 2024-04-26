@@ -65,6 +65,20 @@ nav{
     border-color: #d03d3d;
     transition: all ease-in-out .6;
 }
+.hamburguer{
+    width: 80px;
+    height: 80px;
+    display: none;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: color .5s ease-in;
+}
+.hamburguer > i{
+    font-size: 25px;
+    line-height: 80px;
+    color: #d03d3d;
+}
 .titulospro{
     text-align: left;
     margin: 20px 0;
@@ -304,3 +318,74 @@ nav{
 .certificate a:hover {
     color: #fff;
 }
+/* ################################## MEDIA QUERYS ################################## */
+@media screen and (max-width:600px){
+    body{
+        background-color: aquamarine;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .contenido-header{
+        width: 100%;
+        height: 500px;
+    }
+    .contenido-header>img{
+        width: 120px;
+        height: 120px;
+        animation: ease-in animacion 0.5s;
+        margin: 20px 0;
+    }
+    .articulo, .experience, .certificate, .skills{
+        width: 90%;
+    }
+    .skills{
+        margin-bottom: 20px;
+
+    }
+    .articulo, .experience, .content-skills{
+        margin-top: 20px;
+    }
+    .content-skills{
+        margin-bottom: 20px;
+    }
+    .content-certificados{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .enlaces-header{
+        position: fixed;
+        background-color: #d03d3d;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        clip-path: circle(0.0% at 0 0);
+    }
+    .nav .hamburgueropen{
+        clip-path: circle(150.0% at 0 0);
+    }
+
+    .nav .enlaces-header a{
+        color: #fff;
+        background-color: #d03d3d;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-top: 20px;
+        width: 50%;
+        text-align: center;
+
+    }
+    .nav .enlaces-header a:hover{
+        color: #d03d3d;
+        background-color: #fff;
+    }
+    .hamburguer{
+        display: block;
+    }
+
+}
+    
