@@ -319,10 +319,7 @@ nav{
     color: #fff;
 }
 /* ################################## MEDIA QUERYS ################################## */
-@media screen and (max-width:600px){
-    body{
-        background-color: aquamarine;
-    }
+@media screen and (max-width:600px){   
     h1{
         font-size: 25px;
     }
@@ -388,4 +385,6 @@ nav{
     }
 
 }
+
+
     
