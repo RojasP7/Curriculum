@@ -98,6 +98,7 @@ nav{
     height: 300px;
     animation: ease-in animacion 0.5s;
     margin-left: 50px;
+    border-radius: 50%;
 
 }
 @keyframes animacion{
