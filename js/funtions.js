@@ -46,12 +46,39 @@ function load_page(){
 
       document.getElementById("text").innerText = "El array a calcular es "+array_num;
       document.getElementById("impresion").value = array_num;
+      document.getElementById("name_search").value = nombre_form;
+
+      let hour_system = new Date();
+      console.log(hour_system.getDate());
+      console.log(hour_system.getDay());
+      console.log(hour_system.getFullYear());
+      console.log(hour_system.getHours());
+      console.log(hour_system.getMilliseconds());
+      console.log(hour_system.getMinutes());
+      console.log(hour_system.getMonth());
+      console.log(hour_system.getSeconds());
+      console.log(hour_system.getTime());
+      var array_month = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"]
+      var array_day = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]
+
+      let accomonth = hour_system.getMonth();
+        console.log(array_month[accomonth]);
+
+      let accoday = hour_system.getDay();
+        console.log(array_day[accoday]);
+        
+        console.log(hour_system.getDate()+"/"+(hour_system.getMonth()+1)+"/"+hour_system.getFullYear());
+
+      
+      document.getElementById("hour_system").value = hour_system
 
 }
 function send_form(){
     let name = document.getElementById("name").value;
     let last_name = document.getElementById("last_name").value;
-    if(name.length == 0 || last_name.length == 0){
+    let pass_one = document.getElementById("pass_one").value;
+    let pass_two = document.getElementById("pass_two").value;
+    if(name.length == 0 || last_name.length == 0 ||pass_one.length == 0 ||pass_two.length == 0 ){
         Swal.fire({
         title: "Cajas de texto vacias",
         text: "Alguna de las cajas de texto esta vacia",
@@ -69,6 +96,13 @@ function send_form(){
         else{
         document.getElementById("last_name").style.border = "2px solid green"
         }   
+}
+else if(pass_one != pass_two){
+    Swal.fire({
+        title: "sus contraseñas no son iguales",
+        text: "porfavor valide sus contraseñas",
+        icon: "error"
+    });
 }
 else{
     document.getElementById("print").innerText = "su nombre es: "+ name + " "+ last_name;
@@ -147,6 +181,12 @@ function eliminar_prim(){
 }
 function agregar(){
     let num = document.getElementById("num").value;
+
+    if(isNaN(num) == true){
+        swal.fire ("solo se aceptan numeros");
+    }
+
+
     let array_add = array_numerico.push(num);
     console.log(array_add);
     console.log(array_numerico);
@@ -167,5 +207,29 @@ function limpiar(){
     document.getElementById("name").value = "";
     document.getElementById("last_name").value = "";
     document.getElementById("result").innerText = "";
+
+}
+
+var nombre_form = "Fabian Eduardo Rojas Pallarez";
+
+function search(){
+    let nombre_buscar = document.getElementById("name_search").value;
+    // Swal.fire (nombre_buscar.toLowerCase()); //toUperCase() Mayuscula
+    // Swal.fire({
+    //     title: nombre_buscar.toLowerCase(),
+    //     text: "Alguna de las cajas de texto esta vacia",
+    //     icon: "error"
+    // });
+    // swal.fire(nombre_buscar.charAt(0));
+    // let word = nombre_buscar.indexOf("F");
+    // swal.fire(word+" ");
+    // let word = nombre_buscar.substring("5,15");
+    // swal.fire(word+" ");
+    let word = nombre_buscar.split("");
+    swal.fire(word+" ");
+    let word_com = word.join("");
+    console.log(word_com);
+
+    
 
 }
