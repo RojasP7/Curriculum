@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicios</title>
+</head>
+<style>
+     body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+     }
+
+     .container{
+        height: 400px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        border: 2px solid gray;
+        box-shadow: 0 0 5px gray;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+     }
+
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <input type="text" id="caja_uno">
+            <input type="text" id="caja_dos">
+            <input type="text" id="caja_tres">
+            <input type="text" id="caja_cuatro">
+        </div>
+        <h3>Zona de impresion</h3>
+        <div id="print_name"></div>
+        <!-- <div id="tablas"></div> -->
+        <div id="cant"></div>
+        <button onclick="enviar()">ENVIAR</button>
+    </div>
+    <script>
+
+        // TABLAS
+        // function enviar(){
+        //     let caja_uno = document.getElementById("caja_uno").value;
+        //     let caja_dos = document.getElementById("caja_dos").value;
+        //     let concat = caja_uno + caja_dos;
+        //     document.getElementById("print_name").innerText = caja_uno + " " + caja_dos;
+        //     document.getElementById("cant").innerText = "Tiene "+ concat.length+ " caracteres";
+        //     let cadena="";
+        //     for(let i = 1; i <=20; i++){
+        //         // cadena += `| ${concat.length} x ${i} = ${concat.length*i} /n `;
+        //         cadena += concat.length + " x "+ i +" = " (concat.length*i);
+        //     }
+        //     document.getElementById("tablas").innerText = cadena;
+
+        // }
+
+
+            // NOMBRE
+        // function enviar(){
+        // let caja_uno = document.getElementById("caja_uno").value;
+        // let caja_dos = document.getElementById("caja_dos").value;
+        // let caja_tres = document.getElementById("caja_tres").value;
+        // let caja_cuatro = document.getElementById("caja_cuatro").value;
+        // let concat = caja_uno + caja_dos + caja_tres + caja_cuatro;
+        // document.getElementById("print_name").innerText = caja_uno + " " + caja_dos + " " +caja_tres + " " + caja_cuatro;
+        // document.getElementById("cant").innerText = "Tiene "+ concat.length+ " caracteres";
+        // let letra;
+        // let frase = ""; 
+        // for(let i = 0; i<concat.length;i++){
+        //     letra = concat.charAt(i);
+        //     frase+= letra + " = "+ (i+1) + "\n";
+        // }
+        // document.getElementById("print_name").innerText = frase;
+        // }
+
+        // PARES E IMPARES
+        // function enviar(){
+        // let caja_uno = document.getElementById("caja_uno").value;
+        // let caja_dos = document.getElementById("caja_dos").value;
+        // let concat = caja_uno + caja_dos;
+        // let cadena = "";
+        // for(let i= caja_uno ;i<= caja_dos;i++){
+        //     if(i%2 == 0){
+        //         cadena += i +" es par "+ "\n";
+        //     }
+        // }
+        // document.getElementById("print_name").innerText = cadena;
+        // }
+
+        // QUITAR LETRAS
+        // function enviar(){
+        // let caja_uno = document.getElementById("caja_uno").value;
+        // let caja_dos = document.getElementById("caja_dos").value;
+        // let acco = 0;
+        // let text = "";
+        // for(let i=0 ;i<= caja_uno.length;i++){
+        //     if(caja_uno.charAt(i) == caja_dos){
+        //         // text += "*";
+        //         acco++;
+        //     }
+        //     else{
+        //         text += caja_uno.charAt(i);
+        //     }
+        // }
+        // document.getElementById("print_name").innerText = "hay "+ acco + " letras . su texto sin la letra es:"+text ;
+        // }
+    </script>
+
+</body>
+</html>
